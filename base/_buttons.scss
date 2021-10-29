@@ -1,0 +1,92 @@
+.button {
+
+    &:hover {
+        background-color: $color-brown;
+        cursor: pointer;
+    }
+}
+
+.welcome-button {
+    @include media-tablet {
+        display: none;
+    }
+}
+
+.button-welcome {
+    background: $color-red;
+    border-radius: 10px;
+    padding: 0 64px;
+    margin-top: 75px;
+    border: none;
+    width: 360px;
+    height: 75px;
+
+
+
+}
+
+.button-welcome-link {
+    text-decoration: none;
+}
+
+.button-welcome-text {
+    @extend %font-main;
+
+    color: $color-light;
+    @include font ($font-weight:300, $font-size:22px, $line-height:26px);
+    letter-spacing: 2px;
+
+}
+
+.slider-button-next,
+.slider-button-prev {
+    background: $color-red;
+    width: 100px;
+    height: 35px;
+    border: none;
+    border-radius: 10px;
+
+}
+
+.button-tickets-amount {
+    border: hidden;
+    background-color: $color-light;
+    @extend %font-main;
+    color: $color-background;
+    @include font ($font-size: 32px,
+        $line-height: 37px,
+    );
+
+    @include media-laptop {
+        width: 21px;
+        height: 38px;
+    }
+
+
+}
+
+.button-buy-tickets {
+    width: 175px;
+    height: 50px;
+    background-color: $color-background;
+    margin-top: 52px;
+    border: none;
+
+    @include media-laptop {
+        margin-top: 0px;
+    }
+
+
+
+}
+
+.button-buy-tickets-span {
+
+    @extend %font-main;
+    color: $color-light;
+    @include font ($font-weight: 300,
+        $font-size: 22px,
+        $line-height: 26px,
+    );
+    letter-spacing: 2px;
+}

@@ -1,0 +1,156 @@
+.contacts-wrapper {
+    padding: 75px 240px;
+
+    h2 {
+        @extend %font-header;
+        @include font ($font-size: 80px,
+            $line-height: 90px,
+        );
+        color: $color-brown;
+        letter-spacing: 5px;
+        text-transform: uppercase;
+        position: relative;
+
+
+        &:after {
+            @include border($height:3px,
+                $width:1440px, $bottom: -25px,
+            );
+
+            @include media-laptop {
+                @include border ($height:3px,
+                    $width:984px, $bottom: -20px);
+            }
+
+            @include media-tablet {
+                @include border ($height:3px,
+                    $width:728px, $bottom: -20px);
+            }
+
+            @include media-mobile {
+                @include border ($height:3px,
+                    $width:380px, $bottom: -20px);
+            }
+        }
+
+        @include media-laptop {
+            @include font ($font-size: 50px,
+                $line-height: 75px,
+            );
+        }
+
+        @include media-tablet {
+            @include font ($font-size: 40px,
+                $line-height: 60px,
+            );
+        }
+
+        @include media-mobile {
+            @include font ($font-size:28px,
+                $line-height: 40px,
+            );
+        }
+    }
+}
+
+.contacts-content {
+    padding-top: 75px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    @include media-mobile {
+        flex-wrap: wrap;
+    }
+
+    h3 {
+        margin: 0 auto;
+        @extend %font-main;
+
+        @include font ($font-weight: 500,
+            $font-size: 28px,
+            $line-height: 33px,
+        );
+
+        @include media-laptop {
+            @include font ($font-size: 24px,
+                $line-height: 28px,
+            );
+        }
+
+        @include media-tablet {
+            @include font ($font-size: 20px,
+                $line-height: 23px,
+            );
+        }
+
+        @include media-mobile {
+            @include font ($font-size: 16px,
+                $line-height: 19px,
+            );
+        }
+
+        color: $color-background;
+    }
+
+    p {
+        @extend %font-main;
+
+        @include font ($font-weight: 300,
+            $font-size: 22px,
+            $line-height: 26px,
+        );
+        color: $color-background;
+
+        &:hover {
+            color: $color-brown;
+        }
+
+    }
+
+    a {
+        text-decoration: none;
+
+
+    }
+}
+
+.contacts-content-picture-block {
+    @include media-laptop {
+        width: 694px;
+        height: 454px;
+    }
+
+    @include media-tablet {
+        width: 728px;
+        height: 476px;
+    }
+
+    @include media-mobile {
+        width: 380px;
+        height: 248px;
+
+    }
+
+    .contacts-content-picture {
+        max-width: 100%;
+        max-height: 100%;
+
+        @include media-laptop {
+            width: 694px;
+            height: 454px;
+        }
+
+        @include media-mobile {
+            display: none;
+        }
+    }
+
+    .contacts-content-picture-small {
+        display: none;
+
+        @include media-mobile {
+            display: block;
+        }
+    }
+}

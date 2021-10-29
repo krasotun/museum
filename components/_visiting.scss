@@ -1,0 +1,188 @@
+.visiting-wrapper {
+    padding: 0 240px;
+
+    @include media-laptop {
+        padding-left: 108px;
+        padding-right: 108px;
+
+    }
+
+    @include media-tablet {
+        padding-left: 56px;
+        padding-right: 56px;
+
+    }
+
+    @include media-mobile {
+        padding-left: 50px;
+        padding-right: 50px;
+
+    }
+}
+
+.visiting-h2 {
+    color: $color-brown;
+    @extend %font-header;
+    @include font ($font-size: 80px,
+        $line-height: 90px,
+
+    );
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    position: relative;
+
+    &:after {
+        @include border ($height:3px,
+            $width:1410px, $bottom: -25px);
+
+        @include media-laptop {
+            @include border ($height:3px,
+                $width:984px, $bottom: -20px);
+        }
+
+        @include media-tablet {
+            @include border ($height:3px,
+                $width:728px, $bottom: -20px);
+        }
+
+        @include media-mobile {
+            @include border ($height:3px,
+                $width:380px, $bottom: -20px);
+        }
+    }
+
+    @include media-laptop {
+        @include font ($font-size: 50px,
+            $line-height: 75px, );
+
+        letter-spacing: 5px;
+    }
+
+    @include media-tablet {
+        @include font ($font-size: 40px,
+            $line-height: 65px, );
+    }
+
+    @include media-mobile {
+        @include font ($font-size: 20px,
+            $line-height: 40px, );
+    }
+
+
+}
+
+.visiting-content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    color: $color-text-dark;
+    padding: 75px 0;
+
+    @include media-laptop {
+        padding: 60px 0;
+    }
+
+    @include media-tablet {
+        padding: 40px 0;
+    }
+
+    img {
+        max-width: 100%;
+    }
+
+
+    h3 {
+        @extend %font-header;
+        @include font ($font-size: 32px,
+            $line-height: 35px);
+        letter-spacing: 5px;
+        text-transform: uppercase;
+        position: relative;
+
+        &:after {
+
+            @include border ($height:2px,
+                $width:300px, $bottom: -10px);
+        }
+
+        @include media-laptop {
+            @include font ($font-size: 28px,
+                $line-height: 31px, );
+            letter-spacing: 3px;
+
+            &:after {
+
+                @include border ($height:2px,
+                    $width:150px, $bottom: -10px);
+            }
+        }
+    }
+
+
+}
+
+.visiting-content-block {
+    width: 28%;
+    padding-bottom: 75px;
+
+
+    @include media-laptop {
+        width: 48%;
+        padding-bottom: 60px;
+
+
+    }
+
+    @include media-tablet {
+        padding-bottom: 40px;
+    }
+
+    @include media-mobile {
+        width: 100%;
+
+    }
+
+
+}
+
+.visiting-content-tour {
+    @extend %font-main;
+    @include font ($font-weight: 200,
+        $font-size: 22px,
+        $line-height:26px);
+
+
+    @include media-laptop {
+        @include font ($font-weight: 200, $font-size: 20px,
+            $line-height: 23px, );
+
+    }
+
+    @include media-tablet {
+        @include font ($font-weight: 200, $font-size: 18px,
+            $line-height: 21px, );
+
+    }
+
+    @include media-mobile {
+        @include font ($font-weight: 200, $font-size: 16px,
+            $line-height: 19px, );
+
+    }
+
+}
+
+.visiting-content-view {
+    @extend %font-main;
+    @include font ($font-weight: 200,
+        $font-size: 18px,
+        $line-height:21px);
+
+    @include media-laptop {
+        @include font ($font-weight: 200, $font-size: 16px,
+            $line-height: 19px, );
+
+    }
+
+
+}

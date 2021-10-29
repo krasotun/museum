@@ -1,0 +1,202 @@
+.video-wrapper {
+    padding: 75px 240px;
+
+}
+
+.video-top {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 75px;
+
+    .video-title,
+    .video-text {
+
+        flex: 1;
+    }
+
+
+
+    h2 {
+        margin: 0;
+        @extend %font-header;
+        @include font ($font-size: 80px,
+            $line-height: 90px,
+        );
+        letter-spacing: 5px;
+        text-transform: uppercase;
+        color: $color-brown;
+
+        @include media-laptop {
+            @include font ($font-size: 50px,
+                $line-height: 75px,
+            );
+        }
+
+        @include media-tablet {
+            @include font ($font-size: 40px,
+                $line-height: 60px,
+            );
+        }
+
+        @include media-mobile {
+            @include font ($font-size: 28px,
+                $line-height: 40px,
+            );
+        }
+
+
+    }
+
+
+    p {
+        margin: 0;
+        @extend %font-main;
+        @include font ($font-weight: 300,
+            $font-size: 22px,
+            $line-height: 38px,
+        );
+
+    }
+}
+
+.video-text {
+    @include media-laptop {
+        display: none;
+    }
+}
+
+.video-preview {
+    margin-top: 125px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+
+}
+
+
+
+.video-preview-content-1 {
+    background-image: url('assets/img/poster3.png');
+
+    width: 452px;
+    height: 254px;
+
+    @include media-laptop {
+        width: 300px;
+        height: 170px;
+        background-size: contain;
+
+    }
+
+    @include media-tablet {
+        width: 354px;
+        height: 199px;
+        background-size: contain;
+    }
+
+    @include media-mobile {
+        width: 180px;
+        height: 101px;
+        background-size: contain;
+    }
+}
+
+
+.video-preview-content-2 {
+
+
+    background-image: url("assets/img/poster1.png");
+    width: 452px;
+    height: 254px;
+
+    @include media-laptop {
+        width: 300px;
+        height: 170px;
+        background-size: contain;
+
+    }
+
+    @include media-tablet {
+        width: 354px;
+        height: 199px;
+        background-size: contain;
+    }
+
+    @include media-mobile {
+        width: 180px;
+        height: 101px;
+        background-size: contain;
+    }
+
+}
+
+.video-preview-content-3 {
+
+
+    background-image: url("assets/img/poster2.png");
+    width: 452px;
+    height: 254px;
+
+    @include media-laptop {
+        width: 300px;
+        height: 170px;
+        background-size: contain;
+
+    }
+
+    @include media-tablet {
+
+        display: none;
+        width: 354px;
+        height: 199px;
+        background-size: contain;
+    }
+
+    @include media-mobile {
+        display: none;
+        width: 180px;
+        height: 101px;
+        background-size: contain;
+    }
+}
+
+.video-preview-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 36px 0px 10px;
+
+    h4 {
+        @extend %font-main;
+        @include font ($font-size: 18px,
+            $line-height: 38px, );
+        color: $color-light;
+        padding-top: 0;
+
+    }
+}
+
+.youtube-icon {
+    padding: 20px 192px;
+
+    @include media-laptop {
+        display: none;
+    }
+}
+
+.video-navigation {
+    padding-top: 40px;
+    display: flex;
+    justify-content: center;
+
+    img {
+        padding: 0 10px;
+    }
+}
+
+.video-preview-img-more {
+    @include media-mobile {
+        display: none;
+    }
+}

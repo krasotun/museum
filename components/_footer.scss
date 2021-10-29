@@ -1,0 +1,62 @@
+.footer {
+    background-color: $color-background;
+}
+
+.footer-wrapper {
+    padding: 75px 240px;
+    display: flex;
+    flex-direction: row;
+    border-bottom: solid 3px $color-icons-border;
+
+    @include media-mobile {
+        flex-direction: column;
+    }
+
+
+
+    .footer-icons {
+        padding-top: 90px;
+    }
+
+    .footer-icons-link {
+        padding-right: 25px;
+
+        @include media-mobile {
+            padding-right: 5px;
+        }
+    }
+}
+
+
+
+.footer-copyright {
+    padding: 50px 0 52px 240px;
+    display: flex;
+    flex-direction: row;
+
+    justify-content: space-between;
+
+    p {
+        @extend %font-main;
+        color: $color-light;
+        @include font ($font-weight: 200,
+            $font-size: 22px,
+            $line-height: 22px,
+        );
+        letter-spacing: 2px;
+
+
+    }
+
+    a {
+        text-decoration: none;
+
+
+    }
+}
+
+.footer-school {
+    @include media-mobile {
+        display: none;
+    }
+}

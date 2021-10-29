@@ -1,0 +1,19 @@
+.logo-section {
+
+    display: flex;
+    align-items: center;
+}
+
+.logo-text {
+    @extend %font-header;
+    color: $color-light;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    @include font ($font-size: 28px, $line-height:31px);
+    margin-left: 25px;
+}
+
+.logo-section-footer {
+    display: flex;
+
+}

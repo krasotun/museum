@@ -1,0 +1,200 @@
+.welcome-slider-navigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 75px;
+    width: 600px;
+    height: 120px;
+    background: $color-background;
+    position: absolute;
+    bottom: 0;
+    right: 240px;
+
+
+    @include media-laptop {
+
+        margin-top: 0;
+        width: 700px;
+        height: 120px;
+        right: 0;
+        bottom: 0;
+    }
+
+    @include media-tablet {
+
+        width: 401px;
+        height: 40px;
+        bottom: 0;
+        right: 143px;
+        padding: 0 0;
+
+    }
+
+    @include media-mobile {
+        width: 230px;
+        height: 40px;
+        right: 75px;
+        bottom: 0;
+        padding: 0 0;
+
+    }
+}
+
+
+
+
+
+.navigation-numbers-text {
+    color: $color-light;
+    @extend %font-main;
+    @include font ($font-size: 22px,
+        $line-height: 40px,
+    );
+    text-transform: uppercase;
+
+    @include media-laptop {
+        @include font ($font-size: 20px,
+            $line-height: 40px,
+        );
+
+    }
+
+    @include media-mobile {
+        @include font ($font-size: 16px,
+            $line-height: 40px,
+        );
+
+    }
+
+}
+
+.slider-navigation-ul {
+    display: list-item;
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    width: 180px;
+
+    @include media-mobile {
+        width: 50px;
+    }
+
+
+    li:first-child {
+        background-color: $color-navigation-icon-active;
+
+    }
+
+    li {
+        width: 16px;
+        height: 16px;
+        background-color: $color-light;
+
+        @include media-laptop {
+
+            width: 12px;
+            height: 12px;
+        }
+
+        @include media-mobile {
+            width: 7px;
+            height: 7px;
+        }
+    }
+
+
+}
+
+.slider-image-block {
+    display: flex;
+    flex-direction: row;
+}
+
+.welcome-navigation-arrows-big {
+    display: flex;
+
+    @include media-mobile {
+        display: none;
+    }
+}
+
+.welcome-navigation-arrows-small {
+    display: none;
+
+    @include media-laptop {
+        display: none;
+    }
+
+    @include media-tablet {
+        display: none;
+    }
+
+    @include media-mobile {
+        display: block;
+    }
+
+}
+
+.navigation-arrow-big {
+    cursor: pointer;
+    padding: 0 10px;
+}
+
+.navigation-arrow-small {
+    padding: 0 0;
+}
+
+.item {
+    display: none;
+    animation: 0.2s duration;
+
+}
+
+.item.active,
+.next {
+    display: block;
+}
+
+// анимация
+
+.to-left {
+    animation-name: left;
+
+}
+
+.to-right {
+    animation-name: right;
+    animation-direction: reverse;
+}
+
+.from-left {
+    animation-name: left;
+    animation-direction: reverse;
+
+}
+
+.from-right {
+    animation-name: right;
+}
+
+@keyframes left {
+    from {
+
+        left: 0;
+    }
+
+    to {
+        left: -100%
+    }
+}
+
+@keyframes right {
+    from {
+
+        left: 100%;
+    }
+
+    to {
+        left: 0
+    }
+}

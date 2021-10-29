@@ -1,0 +1,31 @@
+.hamburger {
+    display: none;
+    position: relative;
+    width: 32px;
+    height: 18px;
+
+    @include media-laptop {
+        display: inline-block;
+    }
+
+
+    &:before {
+        @extend %hamburger-line;
+        top: 0;
+        left: 0;
+
+    }
+
+    &:after {
+        @extend %hamburger-line;
+        bottom: 0;
+        left: 0;
+    }
+
+}
+
+.hamburger-line {
+    @extend %hamburger-line;
+    top: calc(50% - 1.5px);
+
+}

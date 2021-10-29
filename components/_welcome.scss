@@ -1,0 +1,134 @@
+.welcome {
+    background-color: $color-background;
+
+}
+
+.welcome-wrapper {
+    height: 810px;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 240px;
+    max-width: $content-width;
+    margin: auto;
+
+    position: relative;
+
+    @include media-laptop {
+        padding-left: 20px;
+        padding-right: 20px;
+
+    }
+
+    .welcome-text-content {
+        display: flex;
+        flex-direction: column;
+    }
+
+
+
+    /* background-image: url(./assets/img/1.png);
+     background-repeat: no-repeat;
+     background-position: center right 240px; */
+
+    @include media-laptop {
+        height: 585px;
+        background-position: top right;
+        background-size: 700px 525px;
+
+
+    }
+
+    @include media-tablet {
+        height: 861px;
+        background-size: 728px 546px;
+        background-position: bottom right;
+    }
+
+    @include media-mobile {
+        height: 544px;
+        background-size: 380px 285px;
+        background-position: bottom right;
+    }
+}
+
+
+
+.welcome-content {
+    display: flex;
+    flex-direction: row;
+
+
+    @include media-laptop {
+        padding-top: 50px;
+    }
+
+    @include media-tablet {
+        padding-top: 0;
+        text-align: center;
+        margin: 0 auto;
+    }
+
+}
+
+.welcome-title {
+    @include font ($font-size:80px, $line-height:90px);
+    color: $color-light;
+    @extend %font-header;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    margin: 0;
+
+    @include media-laptop {
+        @include font ($font-size: 50px,
+            $line-height: 90px,
+        );
+        letter-spacing: 5px;
+        padding-top: 0;
+    }
+
+    @include media-tablet {
+        @include font ($font-size: 40px,
+            $line-height: 60px,
+        );
+        letter-spacing: 5px;
+        padding-top: 0;
+    }
+
+    @include media-mobile {
+        @include font ($font-size: 28px,
+            $line-height: 40px,
+        );
+        letter-spacing: 5px;
+    }
+
+}
+
+.welcome-text {
+    @include font ($font-size:20px, $font-weight:300, $line-height:33px);
+    @extend %font-main;
+    color: $color-light;
+    letter-spacing: 2px;
+    margin: 0;
+
+    @include media-laptop {
+        @include font ($font-weight: 300,
+            $font-size: 24px,
+            $line-height: 28px, );
+    }
+
+    @include media-tablet {
+        padding: 25px 0 50px 0;
+        @include font ($font-weight: 300,
+            $font-size: 20px,
+            $line-height: 23px);
+        letter-spacing: 2px;
+    }
+
+    @include media-mobile {
+        @include font ($font-weight: 300,
+            $font-size: 16px,
+            $line-height: 19px,
+        );
+        letter-spacing: 2px;
+    }
+}

@@ -1,0 +1,48 @@
+.ico {
+    cursor: pointer;
+    display: inline-block;
+}
+
+.icon-round {
+    display: inline-flex;
+    align-items: center;
+    width: 48px;
+    height: 48px;
+    border: 1px solid $color-icons-border;
+    border-radius: 50px;
+    justify-content: center;
+    color: $color-light;
+
+}
+
+.ico-youtube {
+    background-image: url("assets/img/icons/youtube.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 24px;
+    height: 24px;
+}
+
+.ico-instagram {
+    background-image: url("assets/img/icons/instagram.svg");
+    width: 24px;
+    height: 24px;
+}
+
+.ico-facebook {
+    background-image: url("assets/img/icons/facebook.svg");
+    width: 24px;
+    height: 24px;
+}
+
+.ico-twitter {
+    background-image: url("assets/img/icons/twitter.svg");
+    width: 24px;
+    height: 24px;
+}
+
+.ico-pinterest {
+    background-image: url("assets/img/icons/pinterest.svg");
+    width: 24px;
+    height: 24px;
+}

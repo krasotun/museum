@@ -1,0 +1,25 @@
+/// @extend ///
+
+
+%font-header {
+    font-family: "Forum",
+        Verdana,
+        sans-serif;
+}
+
+%font-main {
+    font-family: "Roboto",
+        Verdana,
+        sans-serif;
+}
+
+
+%hamburger-line {
+    content: "";
+    display: inline-block;
+    background-color: $color-light;
+    height: 2px;
+    width: 32px;
+    position: absolute;
+
+}

@@ -1,0 +1,128 @@
+.explore {
+    background-color: $color-background;
+}
+
+.explore-wrapper {
+    height: 865px;
+    padding: 75px 240px;
+    background-image: url(./assets/img/explore.jpg);
+    background-repeat: no-repeat;
+    background-position: center right 240px;
+
+    @include media-laptop {
+        padding: 60px 20px;
+        height: 1149px;
+        background-position: center bottom 60px;
+    }
+
+    @include media-tablet {
+        height: 908px;
+        padding: 40px 20px;
+    }
+
+    @include media-mobile {
+        height: 551px;
+
+        background-position: center bottom 40px;
+        background-size: 380px 368px;
+    }
+
+}
+
+
+.explore-content {
+    color: $color-light;
+    width: 660px;
+
+    h2 {
+        @extend %font-header;
+
+
+        @include font ($font-size: 80px,
+            $line-height: 90px);
+        letter-spacing: 5px;
+        text-transform: uppercase;
+        position: relative;
+
+        &:after {
+            @include border ($height:3px,
+                $width:660px, $bottom: -25px);
+
+            @include media-laptop {
+                @include border ($height:3px,
+                    $width:984px, $bottom: -20px);
+            }
+
+            @include media-tablet {
+                @include border ($height:3px,
+                    $width:728px, $bottom: -20px);
+            }
+
+            @include media-mobile {
+                @include border ($height:3px,
+                    $width:380px, $bottom: -20px);
+            }
+        }
+
+        @include media-laptop {
+            @include font ($font-size: 50px,
+                $line-height: 75px,
+            );
+        }
+
+        @include media-tablet {
+            @include font ($font-size: 40px,
+                $line-height: 60px,
+            );
+        }
+
+        @include media-mobile {
+            @include font ($font-size:28px,
+                $line-height: 40px,
+            );
+        }
+    }
+
+    p {
+        @extend %font-main;
+
+        @include font ($font-weight: 300,
+            $font-size: 22px,
+            $line-height: 38px);
+
+        @include media-laptop {
+            padding: 0;
+            margin: 0;
+            @include font ($font-weight: 300,
+                $font-size: 20px,
+                $line-height: 38px);
+        }
+
+        span {
+            color: $color-text-span;
+        }
+    }
+
+
+
+
+    .explore-content-text {
+        padding-top: 103px;
+
+        @include media-laptop {
+            padding-top: 60px;
+            text-align: left;
+        }
+
+        @include media-tablet {
+            display: none;
+        }
+    }
+}
+
+.text-block-hide {
+    @include media-laptop {
+        display: none;
+    }
+
+}

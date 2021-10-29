@@ -1,0 +1,38 @@
+//Abstract
+@import "../museum/abstract/constants";
+@import "../museum/abstract/mixins";
+@import "../museum/abstract/placeholders";
+
+// Base
+@import "../museum/base/logo";
+@import "../museum/base/buttons";
+@import "../museum/base/_slider.scss";
+@import "../museum/base/navigation";
+@import "../museum/base/videoplayer";
+@import "../museum/base/icons";
+@import "../museum/base/hamburger";
+
+// Components
+@import "../museum/components/header";
+@import "../museum/components/welcome";
+@import "../museum/components/visiting";
+@import "../museum/components/explore";
+@import "../museum/components/video";
+@import "../museum/components/gallery";
+@import "../museum/components/tickets";
+@import "../museum/components/contacts";
+@import "../museum/components/footer";
+
+// Layouts
+@import "../museum/layouts/wrapper";
+@import "../museum/layouts/parallax";
+
+
+// Code
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    max-width: $content-width;
+}
