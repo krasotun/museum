@@ -5,26 +5,26 @@ let isEnabled = true;
 console.log(items);
 
 function changeCurrentItem(n) {
-    currentItem = (n + items.length) % items.length;
+	currentItem = (n + items.length) % items.length;
 }
 
 function hideItem(direction) {
-    isEnabled = false;
-    items[currentItem].classList.add(direction);
-    items[currentItem].addEventListener('animationend', function () {
-        this.classList.remove('active', direction);
-    });
+	isEnabled = false;
+	items[currentItem].classList.add(direction);
+	items[currentItem].addEventListener('animationend', function () {
+		this.classList.remove('active', direction);
+	});
 }
 
 
 function showItem(direction) {
 
-    items[currentItem].classList.add('next', direction);
-    items[currentItem].addEventListener('animationend', function () {
-        this.classList.remove('next', direction);
-        this.classList.add('active');
-        isEnabled = true;
-    });
+	items[currentItem].classList.add('next', direction);
+	items[currentItem].addEventListener('animationend', function () {
+		this.classList.remove('next', direction);
+		this.classList.add('active');
+		isEnabled = true;
+	});
 }
 
 
@@ -32,26 +32,26 @@ function showItem(direction) {
 
 
 function previousItem(n) {
-    hideItem('to-right');
-    changeCurrentItem(n - 1);
-    showItem('from-left');
+	hideItem('to-right');
+	changeCurrentItem(n - 1);
+	showItem('from-left');
 }
 
 function nextItem(n) {
-    hideItem('to-left');
-    changeCurrentItem(n + 1);
-    showItem('from-right');
+	hideItem('to-left');
+	changeCurrentItem(n + 1);
+	showItem('from-right');
 }
 
 document.querySelector('.control.left').addEventListener('click', function () {
-    if (isEnabled) {
-        previousItem(currentItem);
-    }
+	if (isEnabled) {
+		previousItem(currentItem);
+	}
 });
 
 
 document.querySelector('.control.right').addEventListener('click', function () {
-    if (isEnabled) {
-        nextItem(currentItem);
-    }
+	if (isEnabled) {
+		nextItem(currentItem);
+	}
 });
